@@ -37,7 +37,9 @@ export const Input = ({
   );
 };
 
-Input.protoType = {
+Input.propTypes = {
   mask: PropTypes.string,
   label: PropTypes.string,
+  name: PropTypes.string,
+  id: PropTypes.string,
 };
