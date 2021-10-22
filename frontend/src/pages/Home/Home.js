@@ -8,7 +8,7 @@ export const Home = () => {
 
   return (
   <S.ContainerHome>
-    <Helmet title={welcome + user.email}/>
+    <Helmet title={welcome}/>
     <S.Avatar src={user?.avatar_url || '/assets/images/Devs.jpeg'} alt={user?.name || 'placeholder'} />
 
     <S.ContainerTitle>

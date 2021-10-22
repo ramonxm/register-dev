@@ -1,9 +1,8 @@
 import { Button, Form, Input } from '../../../components';
 import { useAuth } from '../../../contexts';
-// import { validationRegister } from '../validations';
 
 export const RegisterForm = () => {
-  const { registerUser, authLoading } = useAuth();
+  const { authLoading, registerUser } = useAuth();
 
   const initValues = {
     email1: '',
@@ -20,7 +19,6 @@ export const RegisterForm = () => {
   return (
     <Form
       initialValues={initValues}
-      // validationSchema={validationRegister}
       onSubmit={handleSubmit}
       >
       <Input type='email' name='email1' label='Informe seu email' placeholder='estartando@devs.com' disabled={authLoading}/>

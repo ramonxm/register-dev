@@ -1,22 +1,22 @@
 import { AuthActionsTypes } from '../types/AuthActionsTypes';
 
-export const RegisterReducer = () => {
+export const LoginReducer = () => {
   const REDUCERS = {
-    [AuthActionsTypes.REGISTER_START]: (state) => ({
+    [AuthActionsTypes.LOGIN_START]: (state) => ({
       ...state,
       authLoading: true,
     }),
-    [AuthActionsTypes.REGISTER_SUCESS]: (state, { payload }) => ({
+    [AuthActionsTypes.LOGIN_SUCESS]: (state, { payload }) => ({
       ...state,
       ...payload,
       authLoading: false,
-      isRegisted: true,
+      isAuthenticated: true,
     }),
-    [AuthActionsTypes.REGISTER_ERROR]: (state, { payload }) => ({
+    [AuthActionsTypes.LOGIN_ERROR]: (state, { payload }) => ({
       ...state,
       ...payload,
       authLoading: false,
-      isRegisted: false,
+      isAuthenticated: false,
     }),
   };
 

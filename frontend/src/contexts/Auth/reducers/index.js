@@ -1,3 +1,4 @@
+import { LoginReducer } from './LoginReducer';
 import { RegisterReducer } from './RegisterReducer';
 
 export const AuthReducer = (state, action) => {
@@ -7,6 +8,7 @@ export const AuthReducer = (state, action) => {
 
   const REDUCERS = {
     ...RegisterReducer(),
+    ...LoginReducer(),
   };
 
   return REDUCERS[action.type](state, action);

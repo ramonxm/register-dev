@@ -8,6 +8,7 @@ import * as S from './RegisterStyled';
 export const Register = () => {
   const { push } = useHistory();
   const { user, isRegisted } = useAuth();
+  console.log('user', user);
 
   useEffect(() => {
     if (isRegisted) {
